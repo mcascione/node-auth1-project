@@ -44,10 +44,6 @@ router.get("/logout", (req, res, next) => {
       if (err) {
         res.json({ message: "no session" });
       } else {
-        res.set(
-          "Set-Cookie",
-          "chocolatechip=; SameSite=Strict; Path=/; Expires=Thu, 01 Jan 1970 00:00:00"
-        );
         res.json({ message: "logged out" });
       }
     });
